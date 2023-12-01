@@ -6,10 +6,6 @@ services:
     image: mariadb
     container_name: mysql
     hostname: mysql
-    volumes:
-      - ./mysql:/var/lib/mysql
-    env_file:
-      - ./mysql.env
     restart: unless-stopped
 
 
@@ -20,10 +16,6 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    volumes:
-      - ./glpi/:/var/www/html/glpi
-    environment:
-      - TIMEZONE=America/Santiago
     restart: unless-stopped
     
     
