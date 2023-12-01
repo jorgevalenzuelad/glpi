@@ -18,8 +18,8 @@ services:
     container_name : glpi
     hostname: glpi
     ports:
-      - "5001:80"
-      - "5002:443"
+      - "80:80"
+      - "443:443"
     volumes:
       - ./glpi/:/var/www/html/glpi
     environment:
